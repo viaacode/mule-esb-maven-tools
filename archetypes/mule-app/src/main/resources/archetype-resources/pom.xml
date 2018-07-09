@@ -186,5 +186,15 @@
             <name>MuleSoft Releases</name>
             <url>https://repository.mulesoft.org/nexus/content/repositories/public</url>
         </pluginRepository>
+		<pluginRepository>
+            <id>viaa-snapshots</id>
+            <name>VIAA Snapshots</name>
+			<url>http://do-qas-mvn-01.do.viaa.be:8081/repository/maven-snapshots/</url>
+        </pluginRepository>
+		<pluginRepository>
+            <id>viaa-releases</id>
+            <name>VIAA Releases</name>
+			<url>http://do-qas-mvn-01.do.viaa.be:8081/repository/maven-releases/</url>
+        </pluginRepository>
     </pluginRepositories>
 </project>
