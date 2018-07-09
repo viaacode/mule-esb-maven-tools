@@ -37,7 +37,9 @@ before_script:
               </proxy>
           </proxies>
       </settings>' > /root/.m2/settings.xml
-
+cache:
+  paths:
+    - $HOME/.m2/repository
 deploy:
   stage: deploy
   script: mvn help:effective-settings && mvn deploy
