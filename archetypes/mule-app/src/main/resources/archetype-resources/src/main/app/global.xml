@@ -73,7 +73,7 @@
     <context:property-placeholder properties-ref="YamlPropertiesFactoryBean"/>
     <spring:beans>
         <spring:bean id="YamlPropertiesFactoryBean" name="YamlPropertiesFactoryBean" class="org.springframework.beans.factory.config.YamlPropertiesFactoryBean">
-            <spring:property name="resources" value="classpath:${mule.env}.yml"/>
+            <spring:property name="resources" value="classpath:$${mule.env}.yml"/>
         </spring:bean>
     </spring:beans>
 </mule>
