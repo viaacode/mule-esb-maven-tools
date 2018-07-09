@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <name>Mule ESB Maven Tools</name>
@@ -72,14 +73,14 @@
             <id>asequeira</id>
             <name>Alejandro Sequeira</name>
         </developer>
-		<developer>
+        <developer>
             <id>aiannucci</id>
             <name>Alejandro Iannucci</name>
-		</developer>
-		<developer>
+        </developer>
+        <developer>
             <id>anosenzo</id>
             <name>Alejandro Nosenzo</name>
-		</developer>
+        </developer>
         <developer>
             <id>rajprins</id>
             <name>Roy Prins</name>
@@ -289,37 +290,40 @@
             <name>MuleSoft Releases</name>
             <url>https://repository.mulesoft.org/nexus/content/repositories/releases</url>
         </repository>
-		<repository>
+        <repository>
             <id>mule-snapshots</id>
             <name>MuleSoft Snapshot Repository</name>
             <url>https://repository.mulesoft.org/nexus/content/repositories/snapshots/</url>
-		</repository>
+        </repository>
     </repositories>
-	
-	<pluginRepositories>
-		<pluginRepository>
+
+    <pluginRepositories>
+        <pluginRepository>
             <id>mule-releases</id>
             <name>MuleSoft Release Repository</name>
             <url>https://repository.mulesoft.org/nexus/content/repositories/releases</url>
-		</pluginRepository>
-		<pluginRepository>
+        </pluginRepository>
+        <pluginRepository>
             <id>mule-snapshots</id>
             <name>MuleSoft Snapshot Repository</name>
             <url>https://repository.mulesoft.org/nexus/content/repositories/snapshots/</url>
-		</pluginRepository>
-	</pluginRepositories>
+        </pluginRepository>
+    </pluginRepositories>
 
     <distributionManagement>
         <repository>
-            <id>mule-releases</id>
-            <name>Mule Release Repository</name>
-            <url>https://repository-master.mulesoft.org/nexus/content/repositories/releases</url>
+            <uniqueVersion>true</uniqueVersion>
+            <id>viaa-releases</id>
+            <name>VIAA Releases</name>
+            <url>http://do-qas-mvn-01.do.viaa.be:8081/repository/maven-releases/</url>
+            <layout>default</layout>
         </repository>
         <snapshotRepository>
-            <id>mule-snapshots</id>
-            <name>Mule Snapshot Repository</name>
-            <url>https://repository-master.mulesoft.org/nexus/content/repositories/snapshots</url>
             <uniqueVersion>false</uniqueVersion>
+            <id>viaa-snapshots</id>
+            <name>VIAA Snapshots</name>
+            <url>http://do-qas-mvn-01.do.viaa.be:8081/repository/maven-snapshots/</url>
+            <layout>default</layout>
         </snapshotRepository>
     </distributionManagement>
-</project>
+    </project>
