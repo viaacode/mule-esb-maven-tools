@@ -1,4 +1,8 @@
 image: maven:3.5-jdk-7-alpine
+
+variables:
+  MAVEN_OPTS: "-Dlicense.skip=true"
+
 before_script:
   - mkdir -p /root/.m2
   - echo '<settings
