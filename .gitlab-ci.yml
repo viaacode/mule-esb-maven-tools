@@ -6,6 +6,7 @@ before_script:
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
           xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0
           https://maven.apache.org/xsd/settings-1.0.0.xsd">
+          <localRepository>/cache/repository</localRepository>
           <servers>
             <server>
               <id>viaa-snapshots</id>
@@ -37,9 +38,6 @@ before_script:
               </proxy>
           </proxies>
       </settings>' > /root/.m2/settings.xml
-cache:
-  paths:
-    - $HOME/.m2/repository
 deploy:
   stage: deploy
   script: mvn help:effective-settings && mvn deploy
