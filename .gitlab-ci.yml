@@ -1,12 +1,11 @@
 image: maven:3.5-jdk-7-alpine
 before_script:
-  - mvn help:effective-settings
   - echo '<settings
           xmlns="http://maven.apache.org/SETTINGS/1.0.0"
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
           xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0
           https://maven.apache.org/xsd/settings-1.0.0.xsd">
-          <localRepository>/maven/repository</localRepository>
+          <localRepository>${env.CI_PROJECT_DIR}/.m2/repository</localRepository>
           <servers>
             <server>
               <id>viaa-snapshots</id>
@@ -40,7 +39,7 @@ before_script:
       </settings>' > /root/.m2/settings.xml
 cache:
   paths:
-    - /maven/repository
+    - $CI_PROJECT_DIR/.m2/repository
 deploy:
   stage: deploy
   script: mvn deploy
