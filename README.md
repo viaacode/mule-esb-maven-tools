@@ -3,6 +3,19 @@ Mule ESB Maven Tools
 
 The Mule ESB Maven Tools allow the development of Mule applications based on Maven tooling. This kit includes archetypes for building regular Mule applications, Mule domains and Mule domain bundles.
 
+Modifications made by VIAA
+----------------------------------------
+- `distributionManagement` repo changed to VIAA repo in `pom.xml`
+- Files added/modified in mule-app archetype:
+    - [ADDED]       `<APP_HOME>/src/main/resources/log4j2.xml` with rolling file pattern set to `*.log.i` instead of `*-i.log`
+    - [ADDED]       `<APP_HOME>/src/test/resources/log4j2-test.xml`
+    - [ADDED]       `<APP_HOME>/src/main/app/global.xml` with property placeholder referencing ${mule.env}.yml
+    - [ADDED]       `<APP_HOME>/src/main/resources/local.yml`
+    - [ADDED]       `<APP_HOME>/src/main/resources/staging.yml`
+    - [ADDED]       `<APP_HOME>/src/main/resources/production.yml`
+    - [CHANGED]     `mule-config.xml` name changed to `__artifactId__.xml`
+- Added .gitlab-ci.yml for automated deployments
+
 Maven Configuration
 ----------------------------------------
 
